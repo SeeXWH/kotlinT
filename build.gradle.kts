@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "1.9.0"
+    kotlin("plugin.serialization") version "1.9.0" //  <- Добавь эту строку
     application
 }
 
@@ -15,6 +16,10 @@ dependencies {
 }
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
+}
+dependencies {
+    // ... (другие зависимости)
+    implementation("io.github.microutils:kotlin-logging:3.0.5") //  <-  Добавь kotlin-logging
 }
 dependencies {
     implementation("io.ktor:ktor-client-core:2.3.1")
