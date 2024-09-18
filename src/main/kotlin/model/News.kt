@@ -1,18 +1,21 @@
 package model
 
+import PlaceSerializer
 import kotlinx.serialization.Serializable
-import java.time.LocalDate
 
 
 @Serializable
 data class News(
-    val id: Int,
+    val id: Long,
     val title: String,
+    @Serializable(with = PlaceSerializer::class)
     val place: String?,
     val description: String,
-    val siteUrl: String,
-    val favoritesCount: Int,
-    val commentsCount: Int,
-    var rating: Double? = null){
+    val site_url: String?,
+    val favorites_count: Long,
+    val comments_count: Long,
+    val publication_date: Long,
+    var rating: Double? = null
+) {
 
 }
